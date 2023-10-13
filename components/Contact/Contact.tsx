@@ -16,7 +16,7 @@ const Contact = () => {
     if (formRef.current) {
       emailjs
         .sendForm(
-          "service_94y20xo",
+          "service_tl70x2r",
           "template_pccn9vs",
           formRef.current,
           "k2UtwwjyErqh6ute5"
@@ -119,7 +119,7 @@ const Contact = () => {
               cols={10}
               name="message"
             />
-            <button>Contact Me</button>
+            <button className={styles.btn}>Contact Me</button>
           </form>
           {error && <p className={styles.error}>An error occured</p>}
           {success && <p className={styles.success}>Sent succesfully 👍</p>}

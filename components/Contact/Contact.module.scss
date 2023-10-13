@@ -73,6 +73,14 @@
           border-radius: 12px;
           border: 1px solid gray;
         }
+
+        .btn {
+          cursor: pointer;
+
+          &:hover {
+            color: rgb(59, 59, 173);
+          }
+        }
       }
 
       .error {
