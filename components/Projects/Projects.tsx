@@ -16,7 +16,7 @@ const Projects = () => {
             imagePath={project.img}
             title={project.title}
             description={project.description}
-            github={project.description}
+            github={project.github}
             live={project.live}
           />
         ))}

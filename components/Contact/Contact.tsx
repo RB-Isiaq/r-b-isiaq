@@ -1,7 +1,37 @@
+import { useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./Contact.module.scss";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [error, setError] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          "service_94y20xo",
+          "template_pccn9vs",
+          formRef.current,
+          "k2UtwwjyErqh6ute5"
+        )
+        .then(
+          (result) => {
+            setSuccess(true);
+            console.log(result);
+          },
+          (error) => {
+            setError(true);
+            console.log(error);
+          }
+        );
+    }
+  };
+
   return (
     <section id="contact" className={styles.contact}>
       <h1 className={styles.heading}>
@@ -64,18 +94,33 @@ const Contact = () => {
           </div>
         </div>
         <div className={styles.form}>
-          <form>
-            <input required type="text" title="name" placeholder="Name" />
-            <input required type="text" title="Email" placeholder="Email" />
+          <form ref={formRef} onSubmit={sendEmail}>
+            <input
+              required
+              type="text"
+              title="Name"
+              placeholder="Name"
+              name="name"
+            />
+            <input
+              required
+              type="text"
+              title="Email"
+              placeholder="Email"
+              name="email"
+            />
             <textarea
               required
               title="msg"
               placeholder="Message"
               rows={10}
               cols={10}
+              name="message"
             />
-            <button disabled>Contact Me</button>
+            <button>Contact Me</button>
           </form>
+          {error && <p className={styles.error}>An error occured</p>}
+          {success && <p className={styles.success}>Sent succesfully 👍</p>}
         </div>
       </div>
     </section>
