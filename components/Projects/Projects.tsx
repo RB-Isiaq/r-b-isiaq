@@ -13,7 +13,7 @@ const Projects = () => {
         {projectTimeline.map((project) => (
           <ProjectCard
             key={project.id}
-            imagePath={project.img}
+            imgPath={project.imgPath}
             title={project.title}
             description={project.description}
             github={project.github}

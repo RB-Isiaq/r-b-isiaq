@@ -1,4 +1,6 @@
-export const tools = [
+import { ITool } from "@/interfaces";
+
+export const tools: ITool[] = [
   { id: 1, label: "Html5", path: "/icons/htmll.png" },
   { id: 2, label: "Css3", path: "/icons/css3.png" },
   { id: 3, label: "JavaScript", path: "/icons/js.png" },

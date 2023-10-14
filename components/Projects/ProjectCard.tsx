@@ -1,24 +1,19 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import styles from "./ProjectCard.module.scss";
-interface ICard {
-  title: string;
-  description: string;
-  imagePath: string;
-  github: string;
-  live: string;
-}
+import { IProject } from "@/interfaces";
+
 const ProjectCard = ({
   title,
   description,
-  imagePath,
+  imgPath,
   github,
   live,
-}: ICard) => {
+}: IProject) => {
   return (
     <div className={styles.card}>
       <div className="image">
         <Image
-          src={imagePath}
+          src={imgPath}
           alt={title}
           width={300}
           height={250}
