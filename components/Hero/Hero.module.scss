@@ -50,6 +50,7 @@
     min-width: 320px;
     max-width: 450px;
     margin-top: -120px;
+    z-index: -1;
 
     .img {
       object-fit: contain;
