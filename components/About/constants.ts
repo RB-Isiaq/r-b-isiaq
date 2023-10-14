@@ -17,3 +17,6 @@ export const tools = [
   { id: 16, label: "GitHub", path: "/icons/github.png" },
   { id: 17, label: "Vs code", path: "/icons/vs code.png" },
 ];
+
+export const about =
+  "I am a highly motivated and enthusiastic frontend developer with passion for creating visually appealing websites and web applications. With a growth mindset, keen attention to details, and problem solving skills, I bring a unique perspective to my work, always approaching projects with a focus on efficiency and simplicity, and ensuring good user experience. I have technical experience using a wide range of tech tools, including ReactJS, NextJs, and Typescript, and I am eager to continue developing my skills and delivering high-quality web applications.";

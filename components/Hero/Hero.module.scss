@@ -38,6 +38,10 @@
       background: inherit;
       border: 1px solid white;
       color: white;
+
+      &:hover {
+        color: rgb(59, 59, 173);
+      }
     }
   }
 

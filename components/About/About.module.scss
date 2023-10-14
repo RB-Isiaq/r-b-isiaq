@@ -35,20 +35,12 @@
     padding-left: 10px;
 
     .tool {
-      animation: scale 1.5s infinite ease-out alternate;
+      animation: spin 2s linear infinite;
       border-radius: 50px;
 
-      &:nth-child(2n + 1) {
-        animation: scale 1.5s infinite ease-in alternate-reverse;
-      }
-      @keyframes scale {
-        from {
-          transform: translateY(-3px) scale(0.95);
-          opacity: (1);
-        }
+      @keyframes spin {
         to {
-          transform: translateY(3px) scale(1.05);
-          opacity: (0.5);
+          transform: rotate(360deg);
         }
       }
     }
