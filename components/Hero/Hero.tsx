@@ -20,7 +20,7 @@ const Hero = () => {
           download="Ridwan's Resume"
           target="_blank"
         >
-          Resume
+          Résumé
         </a>
       </div>
       <div className={styles.image}>
