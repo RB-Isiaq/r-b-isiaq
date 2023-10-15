@@ -1,6 +1,6 @@
 import Image from "next/image";
-import styles from "./ProjectCard.module.scss";
 import { IProject } from "@/interfaces";
+import styles from "./ProjectCard.module.scss";
 
 const ProjectCard = ({
   title,
