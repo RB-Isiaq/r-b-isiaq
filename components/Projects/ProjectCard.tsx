@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { IProject } from "@/interfaces";
-import styles from "./ProjectCard.module.scss";
+import Image from 'next/image';
+import styles from './ProjectCard.module.scss';
+import { IProject } from '@/interfaces';
 
 const ProjectCard = ({
   title,
@@ -8,9 +8,10 @@ const ProjectCard = ({
   imgPath,
   github,
   live,
+  dataType,
 }: IProject) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-testid={dataType}>
       <div className="image">
         <Image
           src={imgPath}
