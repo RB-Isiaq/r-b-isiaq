@@ -26,7 +26,8 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "prettier --write",
-      "npm test -- --findRelatedTests"
+      "npm test -- --findRelatedTests",
+      "npm run check-lint --fix && npm run testing && npx prettier --write ."
     ]
   },
   "dependencies": {
