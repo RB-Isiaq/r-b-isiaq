@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run check-lint --fix && npm run testing && npx prettier --write ."
+      "pre-commit": "npm run format"
     }
   },
   "lint-staged": {
