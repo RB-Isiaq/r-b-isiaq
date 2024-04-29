@@ -12,6 +12,7 @@ export const tools: ITool[] = [
   { id: 9, label: 'Firebase', path: '/icons/firebase.jfif' },
   { id: 10, label: 'MongoDB', path: '/icons/mongodb.png' },
   { id: 11, label: 'Node', path: '/icons/node.png' },
+  { id: 11, label: 'C#', path: '/icons/csharp.png' },
   { id: 12, label: 'Redux', path: '/icons/redux.png' },
   { id: 13, label: 'API', path: '/icons/api.png' },
   { id: 14, label: 'Jest', path: '/icons/jest.png' },

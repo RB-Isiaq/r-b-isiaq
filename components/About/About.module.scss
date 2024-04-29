@@ -14,7 +14,7 @@
   }
 
   p {
-    text-align: justify;
+    text-align: center;
     margin: 70px auto 0;
     font-size: 17px;
     line-height: 150%;
@@ -33,6 +33,8 @@
     grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
     grid-gap: 7px;
     padding-left: 10px;
+    place-items: center;
+    place-content: center;
 
     .tool {
       animation: spin 2s linear infinite;
