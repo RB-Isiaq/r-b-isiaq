@@ -17,7 +17,7 @@ const ProjectCard = ({
           src={imgPath}
           alt={title}
           width={300}
-          height={250}
+          height={220}
           className={styles.img}
         />
       </div>
