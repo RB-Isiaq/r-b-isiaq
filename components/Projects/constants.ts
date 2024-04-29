@@ -6,7 +6,7 @@ export const projectTimeline: IProject[] = [
     title: 'Uptick Talent Capstone',
     description:
       'Led frontend development for landing and admin CMS pages, ensuring intuitive UI and seamless user experiences.',
-    imgPath: '/uptick.png',
+    imgPath: '/Uptick.png',
     github: 'https://github.com/RB-Isiaq/uptick-capstone/tree/develop/dev',
     live: 'https://uptick-capstone-de2i.vercel.app/',
   },
