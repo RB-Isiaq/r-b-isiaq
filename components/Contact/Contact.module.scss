@@ -11,7 +11,7 @@
     text-align: center;
 
     span {
-      color: rgb(59, 59, 173);
+      color: #578b74;
     }
   }
 
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px auto 200px;
+    margin: 50px auto;
     gap: 60px;
     flex-wrap: wrap;
 
@@ -32,8 +32,13 @@
 
       h1 {
         font-size: 40px;
+        margin: 0 auto;
         text-align: center;
+        span {
+          color: #578b74;
+        }
       }
+
       .socials {
         display: flex;
         align-items: center;
@@ -78,7 +83,7 @@
           cursor: pointer;
 
           &:hover {
-            color: rgb(59, 59, 173);
+            color: #578b74;
           }
         }
       }

@@ -1,0 +1,218 @@
+// Resume page styles
+.resume-container {
+  min-height: 100vh;
+  padding: 1.5rem 0;
+  max-width: 68rem;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.resume-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.resume-header {
+  margin-bottom: 1.5rem;
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+
+    @media (min-width: 768px) {
+      font-size: 1.875rem;
+    }
+  }
+
+  .title {
+    font-size: 1.125rem;
+    color: #578b74;
+    margin-top: 0.25rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      svg {
+        height: 1rem;
+        width: 1rem;
+        color: #fff;
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.separator {
+  height: 1px;
+  margin: 1rem 0;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+
+  .section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+
+  .section-content {
+    font-size: 0.875rem;
+  }
+}
+
+.experience-item {
+  margin-bottom: 1rem;
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.25rem;
+
+    .job-title {
+      font-weight: 500;
+    }
+
+    .company {
+      font-size: 0.875rem;
+      color: #578b74;
+    }
+
+    .job-meta {
+      font-size: 0.875rem;
+      text-align: right;
+    }
+  }
+
+  .job-duties {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skill-section {
+    .skill-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+
+    .skill-subtitle {
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      .skill-tag {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        border-radius: 0.25rem;
+        border: 1px solid #e5e7eb;
+        background-color: rgba(12, 12, 29, 0.05);
+      }
+    }
+
+    .education-item {
+      .degree {
+        font-weight: 500;
+      }
+
+      .school,
+      .location,
+      .dates {
+        font-size: 0.875rem;
+      }
+
+      .school {
+        color: #578b74;
+      }
+    }
+
+    .project-item {
+      margin-bottom: 0.75rem;
+
+      .project-title {
+        font-weight: 500;
+        color: #578b74;
+      }
+
+      .project-description {
+        font-size: 0.875rem;
+      }
+    }
+
+    .internship-list {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+      font-size: 0.875rem;
+
+      li {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}

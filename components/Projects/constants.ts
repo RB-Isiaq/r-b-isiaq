@@ -3,7 +3,7 @@ import { IProject } from '@/interfaces';
 export const projectTimeline: IProject[] = [
   {
     id: 1,
-    title: 'Uptick Talent Capstone',
+    title: 'Uptick Talent Capstone.',
     description:
       'Led frontend development for landing and admin CMS pages, ensuring intuitive UI and seamless user experiences.',
     imgPath: '/Uptick.png',

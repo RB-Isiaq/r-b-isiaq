@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface ITool {
   id: number;
   label: string;
@@ -16,4 +17,13 @@ export interface IProject {
   github: string;
   live: string;
   dataType?: string;
+}
+
+// Extend the Window interface to include dataLayer
+export {};
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
 }

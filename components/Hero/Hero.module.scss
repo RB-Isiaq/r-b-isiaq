@@ -1,5 +1,5 @@
 .hero {
-  width: 100;
+  width: 100%; // Fixed missing % sign
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,20 +8,86 @@
   padding-top: 100px;
   min-height: 90vh;
   flex-wrap: wrap;
+  position: relative; // Added for better positioning control
+
+  // Add a subtle animation to draw attention
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes waving {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 
   .details {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: fadeIn 0.8s ease-out forwards;
 
     .name {
       font-size: 50px;
-      letter-spacing: 10px;
+      letter-spacing: 6px;
+      position: relative;
+      width: max-content;
+
+      .wavingHand {
+        display: inline-block;
+        animation: waving 2.5s infinite;
+        transform-origin: 70% 70%; // This makes the rotation look more natural
+      }
+
       span {
-        color: rgb(59, 59, 173);
+        color: #578b74;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #578b74;
+        transition: width 0.5s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
       }
     }
+
     .profession {
       h1 {
         font-size: 70px;
@@ -29,22 +95,17 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+        min-height: 84px; // Added to prevent layout shift during typing
       }
+
       h2 {
         font-size: 20px;
-      }
-    }
+        margin-top: 10px;
+        opacity: 0.9;
+        letter-spacing: 1px;
 
-    .btn {
-      padding: 10px 20px;
-      width: 100px;
-      border-radius: 10px;
-      background: inherit;
-      border: 1px solid white;
-      color: white;
-
-      &:hover {
-        color: rgb(59, 59, 173);
+        // Add a subtle animation for the tech stack
+        animation: fadeIn 1s ease-out 0.5s forwards;
       }
     }
   }
@@ -54,34 +115,121 @@
     min-width: 320px;
     max-width: 450px;
     margin-top: -120px;
-    z-index: -1;
+    z-index: 0; // Changed from -1 to prevent accessibility issues
+    animation: fadeIn 1s ease-out 0.3s forwards;
+    position: relative;
+
+    // Add a subtle floating animation
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
 
     .img {
       object-fit: contain;
       border-radius: 30%;
       width: 100%;
       height: 100%;
-      box-shadow: 1px 4px 6px 1px rgb(59, 59, 173);
+      box-shadow: 1px 4px 6px 1px #578b74;
+      animation: float 6s ease-in-out infinite;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 2px 6px 10px 2px #578b74;
+      }
     }
   }
 
-  @media only screen and (max-width: 712px) {
+  // Add a scroll indicator for better UX
+  &::after {
+    content: '↓';
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    animation: bounce 2s infinite;
+    opacity: 0.7;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0) translateX(-50%);
+    }
+    40% {
+      transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+      transform: translateY(-10px) translateX(-50%);
+    }
+  }
+
+  // Improved responsive design
+  @media only screen and (max-width: 768px) {
     padding-top: 50px;
+
     .details {
       gap: 15px;
+
       .name {
         font-size: 30px;
       }
+
       .profession {
         h1 {
           font-size: 28px;
+          min-height: 40px;
+        }
+
+        h2 {
+          font-size: 18px;
         }
       }
     }
 
     .image {
+      margin-top: 20px;
+
       .img {
-        box-shadow: 0px 6px rgb(59, 59, 173);
+        box-shadow: 0px 6px #578b74;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+
+    &::after {
+      bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .details {
+      .name {
+        font-size: 24px;
+      }
+
+      .profession {
+        h1 {
+          font-size: 22px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
       }
     }
   }

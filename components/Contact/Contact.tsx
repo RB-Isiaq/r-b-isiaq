@@ -41,12 +41,11 @@ const Contact = () => {
       className={styles.contact}
       data-testid={TestId.CONTACT_ID}
     >
-      <h1 className={styles.heading}>
-        Contact <span>Me</span>
-      </h1>
       <div className={styles.contactMe}>
         <div className={styles.work}>
-          <h1>Let&apos;s work together</h1>
+          <h1>
+            <span>Let&apos;s </span> Work <span>Together</span>
+          </h1>
           <div className={styles.socials}>
             <a
               title="link"
@@ -100,6 +99,8 @@ const Contact = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className={styles.contactMe}>
         <div className={styles.form}>
           <form ref={formRef} onSubmit={sendEmail} data-testid={TestId.FORM}>
             <input

@@ -12,7 +12,7 @@ export const tools: ITool[] = [
   { id: 9, label: 'Firebase', path: '/icons/firebase.jfif' },
   { id: 10, label: 'MongoDB', path: '/icons/mongodb.png' },
   { id: 11, label: 'Node', path: '/icons/node.png' },
-  { id: 11, label: 'C#', path: '/icons/csharp.png' },
+  { id: 18, label: 'C#', path: '/icons/csharp.png' },
   { id: 12, label: 'Redux', path: '/icons/redux.png' },
   { id: 13, label: 'API', path: '/icons/api.png' },
   { id: 14, label: 'Jest', path: '/icons/jest.png' },
@@ -21,7 +21,7 @@ export const tools: ITool[] = [
   { id: 17, label: 'Vs code', path: '/icons/vs code.png' },
 ];
 
-export const about = `I am a dedicated and passionate frontend developer who takes pride in crafting visually stunning websites and web applications. With an unwavering commitment to personal growth, a meticulous eye for detail, and a knack for creative problem-solving, I bring a unique perspective to every project. My approach is grounded in efficiency and simplicity, always with a laser focus on delivering exceptional user experiences.\nI possess a strong technical proficiency in a wide array of tools and technologies, including ReactJS, NextJs, and Typescript. I am enthusiastic about further honing my skills and consistently delivering top-notch websites and web applications. My goal is to contribute to the success of every project I'm involved in and to help organizations achieve their goals.`;
+export const about = `I am a dedicated and passionate software engineer who takes pride in crafting visually stunning websites and web applications. With an unwavering commitment to personal growth, a meticulous eye for detail, and a knack for creative problem-solving, I bring a unique perspective to every project. My approach is grounded in efficiency and simplicity, always with a laser focus on delivering exceptional user experiences.\nI possess a strong technical proficiency in a wide array of tools and technologies, including ReactJS, NextJs, and Typescript. I am enthusiastic about further honing my skills and consistently delivering top-notch websites and web applications. My goal is to contribute to the success of every project I'm involved in and to help organizations achieve their goals.`;
 
 export const TestId = {
   ABOUT_ID: 'about',
