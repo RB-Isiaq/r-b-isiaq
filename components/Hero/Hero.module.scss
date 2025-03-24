@@ -1,5 +1,5 @@
 .hero {
-  width: 100%; // Fixed missing % sign
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,9 +8,8 @@
   padding-top: 100px;
   min-height: 90vh;
   flex-wrap: wrap;
-  position: relative; // Added for better positioning control
+  position: relative;
 
-  // Add a subtle animation to draw attention
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -57,7 +56,7 @@
     animation: fadeIn 0.8s ease-out forwards;
 
     .name {
-      font-size: 50px;
+      font-size: 62px;
       letter-spacing: 6px;
       position: relative;
       width: max-content;
@@ -112,12 +111,16 @@
 
   .image {
     flex: 1;
+    width: 100%;
     min-width: 320px;
     max-width: 450px;
-    margin-top: -120px;
+    margin: -120px auto 0;
     z-index: 0; // Changed from -1 to prevent accessibility issues
     animation: fadeIn 1s ease-out 0.3s forwards;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     // Add a subtle floating animation
     @keyframes float {
@@ -219,12 +222,13 @@
   @media only screen and (max-width: 480px) {
     .details {
       .name {
-        font-size: 24px;
+        font-size: 28px;
+        letter-spacing: normal;
       }
 
       .profession {
         h1 {
-          font-size: 22px;
+          font-size: 28px;
         }
 
         h2 {
