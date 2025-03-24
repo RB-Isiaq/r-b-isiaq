@@ -16,11 +16,13 @@ export default function Resume() {
             <div className="contact-info">
               <div className="contact-item">
                 <Phone />
-                <span>+2349030984108</span>
+                <a href="tel:+2349030984108">+2349030984108</a>
               </div>
               <div className="contact-item">
                 <Mail />
-                <span>isiaqridwanbukola1999@gmail.com</span>
+                <a href="mailto:isiaqridwanbukola1999@gmail.com">
+                  isiaqridwanbukola1999@gmail.com
+                </a>
               </div>
               <div className="contact-item">
                 <Github />
@@ -205,7 +207,7 @@ export default function Resume() {
                 OurSpace Platform
               </a>
               <p className="project-description">
-                Developed an MVP for booking short-let homes, including a fully
+                Developed a PWA for booking short-let homes, including a fully
                 functional admin portal.
               </p>
             </div>
