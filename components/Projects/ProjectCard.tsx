@@ -28,9 +28,11 @@ const ProjectCard = ({
           <a rel="noopener" href={live} target="_blank">
             Live
           </a>
-          <a rel="noopener" href={github} target="_blank">
-            Repo
-          </a>
+          {github && (
+            <a rel="noopener" href={github} target="_blank">
+              Repo
+            </a>
+          )}
         </div>
       </div>
     </div>

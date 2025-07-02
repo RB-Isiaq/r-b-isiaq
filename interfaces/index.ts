@@ -14,7 +14,7 @@ export interface IProject {
   imgPath: string;
   title: string;
   description: string;
-  github: string;
+  github?: string;
   live: string;
   dataType?: string;
 }

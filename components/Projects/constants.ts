@@ -3,7 +3,7 @@ import { IProject } from '@/interfaces';
 export const projectTimeline: IProject[] = [
   {
     id: 7,
-    title: 'Knowledge Base Scraper.',
+    title: 'Knowledge Base Scraper',
     description:
       'A powerful web scraping application for extracting and organizing content from blogs, websites, and PDFs into your knowledge base. Built with Next.js frontend and Node.js backend',
     imgPath: '/knowledge-base-scraper.png',
@@ -11,8 +11,24 @@ export const projectTimeline: IProject[] = [
     live: 'https://web-knowledge-base-scraper.vercel.app/',
   },
   {
+    id: 8,
+    title: 'OurSpace',
+    description:
+      'An innovative e-commerce platform for short-term rentals, where users can list their apartments and connect with travelers worldwide.',
+    imgPath: '/ourspace.png',
+    live: 'https://www.exploreourspace.com/',
+  },
+  {
+    id: 9,
+    title: 'AccessCare',
+    description:
+      'An innovative healthcare solution designed to provide convenient and accessible healthcare services to individuals across the globe. Patients can connect with experienced healthcare professionals.',
+    imgPath: '/access-care.png',
+    live: 'https://accesscare.sfhaccess.com/',
+  },
+  {
     id: 1,
-    title: 'Uptick Talent Capstone.',
+    title: 'Uptick Talent Capstone',
     description:
       'Led frontend development for landing and admin CMS pages, ensuring intuitive UI and seamless user experiences.',
     imgPath: '/Uptick.png',

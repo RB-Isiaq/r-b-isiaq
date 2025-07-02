@@ -64,6 +64,10 @@
 
       a {
         color: #578b74;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
