@@ -2,6 +2,15 @@ import { IProject } from '@/interfaces';
 
 export const projectTimeline: IProject[] = [
   {
+    id: 7,
+    title: 'Knowledge Base Scraper.',
+    description:
+      'A powerful web scraping application for extracting and organizing content from blogs, websites, and PDFs into your knowledge base. Built with Next.js frontend and Node.js backend',
+    imgPath: '/knowledge-base-scraper.png',
+    github: 'https://github.com/RB-Isiaq/knowledge-base-scraper',
+    live: 'https://web-knowledge-base-scraper.vercel.app/',
+  },
+  {
     id: 1,
     title: 'Uptick Talent Capstone.',
     description:

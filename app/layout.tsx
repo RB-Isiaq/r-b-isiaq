@@ -13,7 +13,7 @@ const dm_sans = DM_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Isiaq Ridwan Bukola's Portfolio",
-  description: 'A ReactJS frontend developer portfolio',
+  description: 'A fullstack software developer portfolio',
 };
 
 export default function RootLayout({

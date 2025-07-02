@@ -32,7 +32,7 @@ const Hero = () => {
               cursorClassName: 'cursor',
             }}
           />
-          <h2>ReactJS | NextJS | Typescript</h2>
+          <h2>ReactJS | NextJS | NodeJS | Typescript</h2>
         </div>
       </div>
       <div className={styles.image}>
