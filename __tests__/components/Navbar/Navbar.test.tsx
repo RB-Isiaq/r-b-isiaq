@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import Navbar from '@/components/Navbar/Navbar';
+import Navbar from '@/components/Navbar/DesktopNav';
 import { TestId } from '@/components/Navbar/constants';
 
 describe('Navbar component', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { navLinks } from '../Navbar/constants';
+import { navLinks } from './constants';
 import Image from 'next/image';
 import styles from './MobileNav.module.scss';
 import Link from 'next/link';

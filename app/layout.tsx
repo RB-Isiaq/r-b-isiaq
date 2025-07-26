@@ -3,7 +3,6 @@ import { Inter, Poppins, DM_Sans } from 'next/font/google';
 import Script from 'next/script';
 import Container from '@/components/Container/Container';
 import Navbar from '@/components/Navbar/Navbar';
-import MobileNav from '@/components/MobileNav/MobileNav';
 import './globals.scss';
 import styles from './page.module.scss';
 
@@ -29,7 +28,6 @@ export default function RootLayout({
         <main className={styles.main}>
           <Container>
             <Navbar />
-            <MobileNav />
             {children}
           </Container>
         </main>

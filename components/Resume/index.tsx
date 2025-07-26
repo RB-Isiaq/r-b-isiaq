@@ -39,8 +39,9 @@ export default function Resume() {
                 <a
                   data-testid={TestId.RESUME}
                   rel="noopener"
-                  href="/Resume.pdf"
-                  download="Ridwan's Resume"
+                  href={TestId.RESUME_URL}
+                  target="_blank"
+                  download="Isiaq's Resume"
                 >
                   Résumé
                 </a>
@@ -67,7 +68,7 @@ export default function Resume() {
         <section className="section">
           <h3 className="section-title">PROFESSIONAL EXPERIENCE</h3>
 
-          <div className="experience-item">
+          {/* <div className="experience-item">
             <div className="experience-header">
               <div>
                 <h4 className="job-title">Frontend Engineer</h4>
@@ -88,7 +89,7 @@ export default function Resume() {
                 managers, designers, and backend developers
               </li>
             </ul>
-          </div>
+          </div> */}
 
           <div className="experience-item">
             <div className="experience-header">
@@ -102,6 +103,18 @@ export default function Resume() {
               </div>
             </div>
             <ul className="job-duties">
+              <li>
+                Integral contributor to the frontend development of{' '}
+                <a
+                  href="https://www.londonstockexchange.com/personal-investing/tools/tradetutor-strategy-simulator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  TradeTutor
+                </a>
+                , launched in partnership with the London Stock Exchange Group
+                (LSEG).
+              </li>
               <li>
                 Developed integrated chatbots across company websites to enhance
                 product discovery and user interaction
@@ -124,11 +137,35 @@ export default function Resume() {
           <div className="experience-item">
             <div className="experience-header">
               <div>
+                <h4 className="job-title">Frontend Engineer (Contract)</h4>
+                <h5 className="company">OurSpace</h5>
+              </div>
+              <div className="job-meta">
+                <div>07/2024 - 12/2024</div>
+                <div>lagos, Nigeria</div>
+              </div>
+            </div>
+            <ul className="job-duties">
+              <li>
+                Delivered a Progressive Web App (PWA) for short-let home
+                bookings with features like real time messaging, payment
+                integration etc.
+              </li>
+              <li>
+                Developed an admin portal with features like booking management,
+                payment management, analytics dashboards, and user activities.
+              </li>
+            </ul>
+          </div>
+
+          <div className="experience-item">
+            <div className="experience-header">
+              <div>
                 <h4 className="job-title">Frontend Engineer (Volunteer)</h4>
                 <h5 className="company">Edustipend</h5>
               </div>
               <div className="job-meta">
-                <div>06/2023 - 09/2024</div>
+                <div>06/2023 - Present</div>
                 <div>California, United States</div>
               </div>
             </div>
@@ -145,6 +182,7 @@ export default function Resume() {
                 Collaborated on website redesign and revamp to enhance overall
                 user experience
               </li>
+              <li>Contributing to the backend infrastructure development.</li>
             </ul>
           </div>
         </section>
@@ -192,6 +230,14 @@ export default function Resume() {
                 <li>Uptick 2023 - Frontend Developer</li>
               </ul>
             </div>
+
+            <div>
+              <h4 className="skill-subtitle">Mentorships</h4>
+              <ul className="internship-list">
+                <li>The Mouthpiece Innovation - Web Dev Tutor</li>
+                <li>Uptick Talent Fellowship - Frontend Mentor</li>
+              </ul>
+            </div>
           </section>
 
           <section className="skill-section">
@@ -199,12 +245,27 @@ export default function Resume() {
 
             <div className="project-item">
               <a
+                href="https://www.londonstockexchange.com/personal-investing/tools/tradetutor-strategy-simulator/"
+                target="_blank"
+                className="project-title"
+                rel="noopener"
+              >
+                TradeTutor
+              </a>
+              <p className="project-description">
+                TradeTutor is designed to help retail traders from any
+                background build simulated strategies on hundreds of
+                instruments.
+              </p>
+            </div>
+            <div className="project-item">
+              <a
                 href="https://www.exploreourspace.com/"
                 target="_blank"
                 className="project-title"
                 rel="noopener"
               >
-                OurSpace Platform
+                OurSpace
               </a>
               <p className="project-description">
                 Developed a PWA for booking short-let homes, including a fully
@@ -219,26 +280,11 @@ export default function Resume() {
                 className="project-title"
                 rel="noopener"
               >
-                Access Care Platform
+                AccessCare
               </a>
               <p className="project-description">
                 Collaborated as one of two frontend developers on a telemedicine
                 platform facilitating virtual healthcare consultations.
-              </p>
-            </div>
-
-            <div className="project-item">
-              <a
-                href="https://upticktalent.africa/"
-                target="_blank"
-                className="project-title"
-                rel="noopener"
-              >
-                Uptick Talent Website
-              </a>
-              <p className="project-description">
-                Led frontend development for landing and admin CMS pages,
-                ensuring intuitive UI and seamless user experiences.
               </p>
             </div>
           </section>

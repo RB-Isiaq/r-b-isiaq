@@ -9,10 +9,14 @@ const ProjectCard = ({
   github,
   live,
   dataType,
+  type,
 }: IProject) => {
   return (
     <div className={styles.card} data-testid={dataType}>
-      <div className="image">
+      <div className={styles.image}>
+        <div className={styles.badge}>
+          {type === 'client' ? 'Client' : 'Personal'}
+        </div>
         <Image
           src={imgPath}
           alt={title}

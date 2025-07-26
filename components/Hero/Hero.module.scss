@@ -5,10 +5,310 @@
   align-items: center;
   gap: 21px;
   color: white;
-  padding-top: 100px;
+  padding-top: 50px;
   min-height: 90vh;
   flex-wrap: wrap;
   position: relative;
+
+  .details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.8s ease-out forwards;
+
+    .greetings {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(0, 255, 213, 0.1);
+      border: 1px solid rgba(0, 255, 213, 0.3);
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      width: fit-content;
+      animation: slideInLeft 0.8s ease-out;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        background: rgba(0, 255, 213, 0.2);
+      }
+    }
+
+    .status {
+      width: 8px;
+      height: 8px;
+      background: #00ffd5;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .name {
+      font-size: 62px;
+      letter-spacing: 6px;
+      position: relative;
+      width: max-content;
+
+      .wavingHand {
+        display: inline-block;
+        animation: waving 2.5s infinite;
+        transform-origin: 70% 70%; // This makes the rotation look more natural
+      }
+
+      span {
+        color: #578b74;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #578b74;
+        transition: width 0.5s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
+    h2 {
+      font-size: 70px;
+      background-image: linear-gradient(to right, #00ffd5, #0075fa, #db0794);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      min-height: 84px; // Added to prevent layout shift during typing
+    }
+
+    .profession {
+      animation: slideInLeft 0.8s ease-out 0.6s both;
+
+      .label {
+        font-size: 0.875rem;
+        color: #a0a0a0;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 10px;
+      }
+
+      .tag {
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        animation: slideInUp 0.6s ease-out both;
+
+        &:hover {
+          background: rgba(0, 255, 213, 0.1);
+          border-color: rgba(0, 255, 213, 0.3);
+          transform: translateY(-2px);
+        }
+      }
+    }
+
+    .cta {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      animation: slideInLeft 0.8s ease-out 0.8s both;
+
+      .primary {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #00ffd5, #0075fa);
+        border: none;
+        border-radius: 50px;
+        color: #0a0a0a;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 30px rgba(0, 255, 213, 0.3);
+        }
+      }
+
+      .secondary {
+        padding: 1rem 2rem;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        color: white;
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+
+        &:hover {
+          border-color: rgba(0, 255, 213, 0.5);
+          background: rgba(0, 255, 213, 0.1);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  .frame {
+    flex: 1;
+    width: 100%;
+    min-width: 320px;
+    max-width: 450px;
+    z-index: 0; // Changed from -1 to prevent accessibility issues
+    animation: slideInRight 0.8s ease-out 0.4s both;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .backdrop {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
+      background: linear-gradient(
+        135deg,
+        rgba(0, 255, 213, 0.2),
+        rgba(0, 117, 250, 0.2)
+      );
+      border-radius: 50%;
+      filter: blur(20px);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    .image {
+      position: relative;
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      animation: float 6s ease-in-out infinite;
+      transition: transform 0.3s ease;
+      object-fit: contain;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .floating {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      animation: float 8s ease-in-out infinite;
+      animation-delay: 2s;
+
+      .snippet {
+        background: rgba(0, 0, 0, 0.8);
+        border: 1px solid rgba(0, 255, 213, 0.3);
+        border-radius: 12px;
+        padding: 1rem;
+        font-family: 'Monaco', 'Menlo', monospace;
+        font-size: 0.75rem;
+        backdrop-filter: blur(10px);
+        min-width: 200px;
+
+        .header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.5rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+          .dots {
+            display: flex;
+            gap: 0.25rem;
+
+            span {
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: #ff5f57;
+            }
+            span:nth-child(2) {
+              background: #ffbd2e;
+            }
+
+            span:nth-child(3) {
+              background: #28ca42;
+            }
+          }
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          color: #00ffd5;
+
+          .line {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // Add a scroll indicator for better UX
+  &::after {
+    content: '👇';
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    animation: bounce 2s infinite;
+    opacity: 0.7;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
 
   @keyframes fadeIn {
     from {
@@ -48,121 +348,37 @@
     }
   }
 
-  .details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    animation: fadeIn 0.8s ease-out forwards;
-
-    .name {
-      font-size: 62px;
-      letter-spacing: 6px;
-      position: relative;
-      width: max-content;
-
-      .wavingHand {
-        display: inline-block;
-        animation: waving 2.5s infinite;
-        transform-origin: 70% 70%; // This makes the rotation look more natural
-      }
-
-      span {
-        color: #578b74;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: #578b74;
-        transition: width 0.5s ease;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
     }
-
-    .profession {
-      h1 {
-        font-size: 70px;
-        background-image: linear-gradient(to right, #00ffd5, #0075fa, #db0794);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        min-height: 84px; // Added to prevent layout shift during typing
-      }
-
-      h2 {
-        font-size: 20px;
-        margin-top: 10px;
-        opacity: 0.9;
-        letter-spacing: 1px;
-
-        // Add a subtle animation for the tech stack
-        animation: fadeIn 1s ease-out 0.5s forwards;
-      }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
-  .image {
-    flex: 1;
-    width: 100%;
-    min-width: 320px;
-    max-width: 450px;
-    margin: -120px auto 0;
-    z-index: 0; // Changed from -1 to prevent accessibility issues
-    animation: fadeIn 1s ease-out 0.3s forwards;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    // Add a subtle floating animation
-    @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-      100% {
-        transform: translateY(0px);
-      }
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
     }
-
-    .img {
-      object-fit: contain;
-      border-radius: 30%;
-      width: 100%;
-      height: 100%;
-      box-shadow: 1px 4px 6px 1px #578b74;
-      animation: float 6s ease-in-out infinite;
-      transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-      &:hover {
-        transform: scale(1.02);
-        box-shadow: 2px 6px 10px 2px #578b74;
-      }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
-  // Add a scroll indicator for better UX
-  &::after {
-    content: '↓';
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    animation: bounce 2s infinite;
-    opacity: 0.7;
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes bounce {
@@ -182,6 +398,11 @@
   }
 
   // Improved responsive design
+  @media only screen and (max-width: 1280px) {
+    .backdrop {
+      display: none;
+    }
+  }
   @media only screen and (max-width: 768px) {
     padding-top: 50px;
 
@@ -190,27 +411,30 @@
 
       .name {
         font-size: 30px;
+        letter-spacing: 4px;
       }
 
-      .profession {
-        h1 {
-          font-size: 28px;
-          min-height: 40px;
-        }
+      h2 {
+        font-size: 28px;
+        min-height: 40px;
+      }
 
-        h2 {
-          font-size: 18px;
-        }
+      .cta {
+        display: none;
       }
     }
 
-    .image {
+    .frame {
       margin-top: 20px;
 
-      .img {
+      img {
         box-shadow: 0px 6px #578b74;
         max-width: 300px;
         margin: 0 auto;
+      }
+
+      .floating {
+        display: none;
       }
     }
 
@@ -220,20 +444,19 @@
   }
 
   @media only screen and (max-width: 480px) {
+    padding-top: 30px;
+
     .details {
       .name {
         font-size: 28px;
         letter-spacing: normal;
       }
+      h2 {
+        font-size: 28px;
+      }
 
-      .profession {
-        h1 {
-          font-size: 28px;
-        }
-
-        h2 {
-          font-size: 16px;
-        }
+      .cta {
+        display: none;
       }
     }
   }

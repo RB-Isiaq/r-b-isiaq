@@ -1,0 +1,52 @@
+.container {
+  padding: 80px 0 0;
+
+  h2 {
+    font-size: 28px;
+    margin-right: 100px;
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    animation: gradientShift 6s ease-in-out infinite;
+    opacity: 1;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-right: 40px;
+    }
+  }
+
+  .left {
+    background-image: linear-gradient(
+      to left,
+      #00ffd5,
+      #009dff,
+      #6f4aa6,
+      #db0794
+    );
+  }
+
+  .right {
+    background-image: linear-gradient(
+      to right,
+      #00ffd5,
+      #009dff,
+      #6f4aa6,
+      #db0794
+    );
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
