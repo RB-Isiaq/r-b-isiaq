@@ -55,56 +55,34 @@ export default function Resume() {
         <section className="section">
           <h3 className="section-title">PROFESSIONAL SUMMARY</h3>
           <p className="section-content">
-            Driven and creative Frontend Engineer with expertise in ReactJS,
-            NextJS, TypeScript, and Tailwind CSS. Specializes in transforming
-            complex design visions into high-performing, responsive web
-            applications with intuitive UI and seamless UX. Proven track record
-            of delivering visually stunning and technically robust solutions
-            across multiple industries. Collaborative team player with strong
-            problem-solving abilities and attention to detail.
+            Frontend Software Engineer with 3+ years building production web
+            applications across fintech, AI, healthcare and mobility — including
+            a London Stock Exchange–backed trading platform and
+            Banking-as-a-Service wallets. I work primarily in React, Next.js and
+            TypeScript, collaborating across product, design and engineering to
+            ship performant, accessible and maintainable products.
           </p>
         </section>
 
         <section className="section">
           <h3 className="section-title">PROFESSIONAL EXPERIENCE</h3>
 
-          {/* <div className="experience-item">
-            <div className="experience-header">
-              <div>
-                <h4 className="job-title">Frontend Engineer</h4>
-                <h5 className="company">TIMA: Influencer Marketing Agency</h5>
-              </div>
-              <div className="job-meta">
-                <div>09/2024 - Present</div>
-                <div>Lagos, Nigeria</div>
-              </div>
-            </div>
-            <ul className="job-duties">
-              <li>
-                Implement web applications by converting UI designs into
-                reusable components
-              </li>
-              <li>
-                Collaborate cross-functionally with project managers, product
-                managers, designers, and backend developers
-              </li>
-            </ul>
-          </div> */}
-
           <div className="experience-item">
             <div className="experience-header">
               <div>
-                <h4 className="job-title">Frontend Developer</h4>
+                <h4 className="job-title">
+                  Frontend Developer <span className="job-type">Full-time</span>
+                </h4>
                 <h5 className="company">Analytics Intelligence</h5>
               </div>
               <div className="job-meta">
                 <div>12/2023 - Present</div>
-                <div>Lagos, Nigeria</div>
+                <div>Remote — Lagos, Nigeria</div>
               </div>
             </div>
             <ul className="job-duties">
               <li>
-                Integral contributor to the frontend development of{' '}
+                Built frontend for{' '}
                 <a
                   href="https://www.londonstockexchange.com/personal-investing/tools/tradetutor-strategy-simulator/"
                   target="_blank"
@@ -112,24 +90,28 @@ export default function Resume() {
                 >
                   TradeTutor
                 </a>
-                , launched in partnership with the London Stock Exchange Group
-                (LSEG).
+                , a trading-education platform launched in partnership with the
+                London Stock Exchange Group — scaling from a 500-user beta to a
+                student program across 20+ schools with live trading,
+                signalling, leaderboards and virtual-wallet credits.
               </li>
               <li>
-                Developed integrated chatbots across company websites to enhance
-                product discovery and user interaction
+                Built AI-powered chatbot systems across 5 company websites,
+                integrated with the Pulse API to track key product events and
+                improve customer interaction and discovery.
               </li>
               <li>
-                Contributed to implementing a certificate validation system for
-                AI Academy students
+                Developed a certificate verification system supporting AI
+                Academy students and training programs.
               </li>
               <li>
-                Led the revamp and redevelopment of the global company website,
-                improving UX and performance
+                Drove UX, SEO and performance improvements, raising Lighthouse
+                scores to 90+ with responsive, cross-browser-compatible
+                interfaces.
               </li>
               <li>
-                Built reusable UI components ensuring maintainability and
-                consistency in existing codebases
+                Contribute to sprint planning, code reviews and frontend
+                architecture discussions.
               </li>
             </ul>
           </div>
@@ -137,23 +119,26 @@ export default function Resume() {
           <div className="experience-item">
             <div className="experience-header">
               <div>
-                <h4 className="job-title">Frontend Engineer (Contract)</h4>
-                <h5 className="company">OurSpace</h5>
+                <h4 className="job-title">
+                  Frontend Engineer <span className="job-type">Contract</span>
+                </h4>
+                <h5 className="company">SimpliRide</h5>
               </div>
               <div className="job-meta">
-                <div>07/2024 - 12/2024</div>
-                <div>lagos, Nigeria</div>
+                <div>10/2025 - Present</div>
+                <div>Remote — Lagos, Nigeria</div>
               </div>
             </div>
             <ul className="job-duties">
               <li>
-                Delivered a Progressive Web App (PWA) for short-let home
-                bookings with features like real time messaging, payment
-                integration etc.
+                Built the internal admin platform used by the operations team to
+                run a ride-hailing service with thousands of drivers and riders
+                — analytics dashboards, trip and transaction management, fare
+                configuration, driver/rider operations and reporting.
               </li>
               <li>
-                Developed an admin portal with features like booking management,
-                payment management, analytics dashboards, and user activities.
+                Collaborate cross-functionally to improve usability,
+                responsiveness and frontend performance across the platform.
               </li>
             </ul>
           </div>
@@ -161,28 +146,68 @@ export default function Resume() {
           <div className="experience-item">
             <div className="experience-header">
               <div>
-                <h4 className="job-title">Frontend Engineer (Volunteer)</h4>
-                <h5 className="company">Edustipend</h5>
+                <h4 className="job-title">Frontend Engineer</h4>
+                <h5 className="company">TIMA / Endow</h5>
               </div>
               <div className="job-meta">
-                <div>06/2023 - Present</div>
-                <div>California, United States</div>
+                <div>09/2024 - 12/2025</div>
+                <div>Lagos, Nigeria</div>
               </div>
             </div>
             <ul className="job-duties">
               <li>
-                Developed donation and referral leaderboard providing real-time
-                campaign progress updates
+                Developed frontend for{' '}
+                <a
+                  href="https://app.getendow.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Endow
+                </a>
+                , a creator-focused financial management platform tracking
+                revenue across YouTube, Shopify, Patreon, Gumroad and more —
+                used by a growing base of creators.
               </li>
               <li>
-                Implemented user dashboard enabling application status
-                monitoring
+                Built Banking-as-a-Service wallet features — NGN & USD virtual
+                accounts, cards, currency conversion and transfers — on a
+                platform that has processed significant transaction volume.
               </li>
               <li>
-                Collaborated on website redesign and revamp to enhance overall
-                user experience
+                Implemented storefront and checkout experiences with payment
+                integrations via Flutterwave/Stripe.
               </li>
-              <li>Contributing to the backend infrastructure development.</li>
+              <li>
+                Built invoicing, custom payment links, budgeting and
+                expense-tracking features.
+              </li>
+            </ul>
+          </div>
+
+          <div className="experience-item">
+            <div className="experience-header">
+              <div>
+                <h4 className="job-title">Freelance Frontend Engineer</h4>
+                <h5 className="company">Independent</h5>
+              </div>
+              <div className="job-meta">
+                <div>11/2022 - Present</div>
+                <div>Remote</div>
+              </div>
+            </div>
+            <ul className="job-duties">
+              <li>
+                Built production-ready applications across healthcare and
+                operations-management domains.
+              </li>
+              <li>
+                Contributed to AccessCare, a healthcare platform improving
+                access to digital healthcare services.
+              </li>
+              <li>
+                Developed frontend solutions for LekkiPort operational
+                management systems supporting data-driven business workflows.
+              </li>
             </ul>
           </div>
         </section>
@@ -192,24 +217,29 @@ export default function Resume() {
             <h3 className="skill-title">TECHNICAL SKILLS</h3>
             <div className="skill-tags">
               <span className="skill-tag">JavaScript</span>
-              <span className="skill-tag">ReactJS</span>
-              <span className="skill-tag">NextJS</span>
               <span className="skill-tag">TypeScript</span>
+              <span className="skill-tag">Python</span>
+              <span className="skill-tag">React</span>
+              <span className="skill-tag">Next.js</span>
+              <span className="skill-tag">Redux</span>
+              <span className="skill-tag">React Native</span>
               <span className="skill-tag">TailwindCSS</span>
-              <span className="skill-tag">NodeJS</span>
-              <span className="skill-tag">ExpressJS</span>
+              <span className="skill-tag">Node.js</span>
+              <span className="skill-tag">Express.js</span>
               <span className="skill-tag">NestJS</span>
-              <span className="skill-tag">MongoDB</span>
               <span className="skill-tag">PostgreSQL</span>
+              <span className="skill-tag">MongoDB</span>
             </div>
 
-            <h4 className="skill-subtitle">Tools & Platforms</h4>
+            <h4 className="skill-subtitle">Tools & Practices</h4>
             <div className="skill-tags">
               <span className="skill-tag">Git</span>
-              <span className="skill-tag">GitHub</span>
-              <span className="skill-tag">Jira</span>
+              <span className="skill-tag">Docker</span>
+              <span className="skill-tag">Firebase</span>
               <span className="skill-tag">Figma</span>
-              <span className="skill-tag">Postman</span>
+              <span className="skill-tag">CI/CD</span>
+              <span className="skill-tag">REST APIs</span>
+              <span className="skill-tag">Agile</span>
             </div>
           </section>
 
@@ -219,29 +249,46 @@ export default function Resume() {
               <h4 className="degree">B.Sc. Biochemistry</h4>
               <div className="school">University of Ilorin</div>
               <div className="location">Ilorin, Nigeria</div>
-              <div className="dates">2016 - 2021</div>
+              <div className="dates">2016 - 2021 · Second Class Upper</div>
             </div>
 
             <div>
-              <h4 className="skill-subtitle">Internships</h4>
+              <h4 className="skill-subtitle">Community & Leadership</h4>
               <ul className="internship-list">
-                <li>HNG11 2024 - Backend Developer</li>
-                <li>HNGX 2023 - Frontend Developer</li>
-                <li>Uptick 2023 - Frontend Developer</li>
+                <li>Mentor — Uptick Talent Fellowship (2025 - Present)</li>
+                <li>Tutor — The Mouthpiece Techsphere (2025 - Present)</li>
+                <li>GDG DevFest Ilorin (2023) · Kwara Build (2022)</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="skill-subtitle">Mentorships</h4>
+              <h4 className="skill-subtitle">Awards</h4>
               <ul className="internship-list">
-                <li>The Mouthpiece Innovation - Web Dev Tutor</li>
-                <li>Uptick Talent Fellowship - Frontend Mentor</li>
+                <li>Employee of the Year — Analytics Intelligence (2025)</li>
+                <li>Team Player Award — Analytics Intelligence (2025)</li>
+                <li>Culture Champion Award — Analytics Intelligence (2025)</li>
               </ul>
             </div>
           </section>
 
           <section className="skill-section">
             <h3 className="skill-title">KEY PROJECTS</h3>
+
+            <div className="project-item">
+              <a
+                href="https://irb-forge-fe.vercel.app/"
+                target="_blank"
+                className="project-title"
+                rel="noopener"
+              >
+                IRB Forge
+              </a>
+              <p className="project-description">
+                A multi-tenant SaaS platform for mentorship communities, built
+                on a Feature-Sliced Design architecture with Next.js, TanStack
+                Query and Zustand.
+              </p>
+            </div>
 
             <div className="project-item">
               <a
@@ -253,38 +300,25 @@ export default function Resume() {
                 TradeTutor
               </a>
               <p className="project-description">
-                TradeTutor is designed to help retail traders from any
-                background build simulated strategies on hundreds of
+                A tutor-based trading education platform built with the London
+                Stock Exchange Group, simulating strategies across hundreds of
                 instruments.
-              </p>
-            </div>
-            <div className="project-item">
-              <a
-                href="https://www.exploreourspace.com/"
-                target="_blank"
-                className="project-title"
-                rel="noopener"
-              >
-                OurSpace
-              </a>
-              <p className="project-description">
-                Developed a PWA for booking short-let homes, including a fully
-                functional admin portal.
               </p>
             </div>
 
             <div className="project-item">
               <a
-                href="https://accesscare.sfhaccess.com/"
+                href="https://app.getendow.com/"
                 target="_blank"
                 className="project-title"
                 rel="noopener"
               >
-                AccessCare
+                Endow
               </a>
               <p className="project-description">
-                Collaborated as one of two frontend developers on a telemedicine
-                platform facilitating virtual healthcare consultations.
+                A creator-focused fintech platform with Banking-as-a-Service
+                wallets, storefront and revenue tracking across multiple creator
+                platforms.
               </p>
             </div>
           </section>

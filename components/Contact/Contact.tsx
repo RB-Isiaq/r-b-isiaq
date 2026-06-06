@@ -64,20 +64,11 @@ const Contact = () => {
             <a
               title="link"
               rel="noopener"
-              href="https://www.twitter.com/RB_Isiaq"
+              href="https://www.x.com/RB_Isiaq"
               target="_blank"
               className={styles.social}
             >
               <Image src="/twitter.svg" alt="Twitter" width={30} height={30} />
-            </a>
-            <a
-              title="link"
-              rel="noopener"
-              href="https://www.facebook.com/rb_isiaq"
-              target="_blank"
-              className={styles.social}
-            >
-              <Image src="/fb.svg" alt="Facebook" width={30} height={30} />
             </a>
             <a
               title="link"
@@ -103,20 +94,22 @@ const Contact = () => {
       <div className={styles.contactMe}>
         <div className={styles.form}>
           <form ref={formRef} onSubmit={sendEmail} data-testid={TestId.FORM}>
-            <input
-              required
-              type="text"
-              title="Name"
-              placeholder="Name"
-              name="name"
-            />
-            <input
-              required
-              type="text"
-              title="Email"
-              placeholder="Email"
-              name="email"
-            />
+            <div className={styles.row}>
+              <input
+                required
+                type="text"
+                title="Name"
+                placeholder="Name"
+                name="name"
+              />
+              <input
+                required
+                type="email"
+                title="Email"
+                placeholder="Email"
+                name="email"
+              />
+            </div>
             <textarea
               required
               title="msg"

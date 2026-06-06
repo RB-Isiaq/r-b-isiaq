@@ -52,6 +52,10 @@ const Projects = () => {
             live={project.live}
             dataType={TestId.PROJECT_ID}
             type={project.type}
+            stack={project.stack}
+            featured={project.featured}
+            repos={project.repos}
+            impact={project.impact}
           />
         ))}
       </div>

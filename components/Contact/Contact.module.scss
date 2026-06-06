@@ -58,7 +58,7 @@
     .form {
       flex: 1;
       min-width: 320px;
-      max-width: 450px;
+      max-width: 520px;
 
       form {
         width: 100%;
@@ -67,22 +67,52 @@
         gap: 20px;
         padding: 20px 5px;
 
+        .row {
+          display: flex;
+          gap: 20px;
+
+          @media (max-width: 540px) {
+            flex-direction: column;
+          }
+
+          input {
+            flex: 1;
+            min-width: 0;
+          }
+        }
+
         input,
         textarea,
         button {
           width: 100%;
-          padding: 20px;
+          padding: 18px 20px;
           background: inherit;
           color: white;
           outline: 0;
           border-radius: 12px;
-          border: 1px solid gray;
+          border: 1px solid #3a3a45;
+          transition:
+            border-color 0.25s ease,
+            box-shadow 0.25s ease;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+          color: #8a8a92;
+        }
+
+        input:focus,
+        textarea:focus {
+          border-color: #00ffd5;
+          box-shadow: 0 0 0 3px rgba(0, 255, 213, 0.12);
         }
 
         .btn {
           cursor: pointer;
+          font-weight: 500;
 
           &:hover {
+            border-color: #578b74;
             color: #578b74;
           }
         }
