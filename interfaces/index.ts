@@ -18,6 +18,10 @@ export interface IProject {
   live: string;
   dataType?: string;
   type: 'client' | 'personal' | 'all';
+  stack?: string[];
+  featured?: boolean;
+  repos?: { label: string; href: string }[];
+  impact?: string;
 }
 
 // Extend the Window interface to include dataLayer

@@ -4,108 +4,110 @@ import { IProject } from '@/interfaces';
 export const projectTimeline: IProject[] = [
   {
     id: uuid.v7(),
+    title: 'IRB Forge',
+    description:
+      'A multi-tenant SaaS platform for mentorship communities — organizations, invitations, role-based access and live dashboards. Built on a strict Feature-Sliced Design architecture with JWT auth and silent token refresh.',
+    imgPath: '/irb-forge.png',
+    live: 'https://irb-forge-fe.vercel.app/',
+    repos: [
+      { label: 'Frontend', href: 'https://github.com/RB-Isiaq/irb-forge-fe' },
+      { label: 'Backend', href: 'https://github.com/RB-Isiaq/irb-forge' },
+    ],
+    impact: 'Multi-tenant SaaS · Feature-Sliced architecture',
+    stack: [
+      'Next.js 16',
+      'TypeScript',
+      'TanStack Query',
+      'Zustand',
+      'Zod',
+      'Tailwind CSS',
+    ],
+    type: 'personal',
+    featured: true,
+  },
+  {
+    id: uuid.v7(),
     title: 'TradeTutor',
     description:
-      'TradeTutor is designed to help retail traders from any background build simulated strategies on hundreds of instruments. No coding required.',
+      'A tutor-based trading education platform built in partnership with the London Stock Exchange Group, helping retail traders simulate strategies across hundreds of instruments — no coding required.',
     imgPath: '/tradetutor.png',
     live: 'https://www.londonstockexchange.com/personal-investing/tools/tradetutor-strategy-simulator/',
+    impact: '500-user beta → live across 20+ schools',
+    stack: ['React', 'Next.js', 'TypeScript'],
+    type: 'client',
+  },
+  {
+    id: uuid.v7(),
+    title: 'Endow',
+    description:
+      'A creator-focused financial management platform — tracking revenue across YouTube, Shopify, Patreon and Gumroad, with Banking-as-a-Service wallets (NGN/USD virtual accounts, cards, currency conversion, transfers), storefront and invoicing.',
+    imgPath: '/endow.png',
+    live: 'https://app.getendow.com/',
+    impact: 'Many creators · high transaction volume',
+    stack: ['React', 'Next.js', 'TypeScript', 'Redux'],
     type: 'client',
   },
   {
     id: uuid.v7(),
     title: 'OurSpace',
     description:
-      'An innovative e-commerce platform for short-term rentals, where users can list their apartments and connect with travelers worldwide.',
+      'An e-commerce platform for short-term rentals where users list apartments and connect with travelers worldwide.',
     live: 'https://www.exploreourspace.com/',
     imgPath: '/ourspace.png',
+    stack: ['React', 'Next.js', 'TypeScript'],
     type: 'client',
   },
   {
     id: uuid.v7(),
     title: 'AccessCare',
     description:
-      'An innovative healthcare solution designed to provide convenient and accessible healthcare services to individuals across the globe. Patients can connect with experienced healthcare professionals.',
+      'A healthcare solution providing convenient, accessible care — connecting patients with experienced healthcare professionals across the globe.',
     imgPath: '/access-care.png',
     live: 'https://accesscare.sfhaccess.com/',
+    stack: ['React', 'TypeScript'],
     type: 'client',
   },
   {
     id: uuid.v7(),
     title: 'LekkiPort',
     description:
-      'An Operation Management System, Database Management System developed to explore, extract, transform, and make data-driven decisions for the business.',
+      'An operations and database management system built to explore, extract, transform and make data-driven decisions for the business.',
     imgPath: '/lekkiport.png',
     live: 'https://oms.lekkiportdw.com/',
+    stack: ['React', 'TypeScript'],
     type: 'client',
   },
   {
     id: uuid.v7(),
     title: 'Knowledge Base Scraper',
     description:
-      'A powerful web scraping application for extracting and organizing content from blogs, websites, and PDFs into your knowledge base. Built with Next.js frontend and Node.js backend',
+      'A web scraping application for extracting and organizing content from blogs, websites and PDFs into a knowledge base. Next.js frontend with a Node.js backend.',
     imgPath: '/knowledge-base-scraper.png',
     github: 'https://github.com/RB-Isiaq/knowledge-base-scraper',
     live: 'https://web-knowledge-base-scraper.vercel.app/',
+    stack: ['Next.js', 'Node.js', 'TypeScript'],
     type: 'personal',
   },
   {
     id: uuid.v7(),
     title: 'Uptick Talent Capstone',
     description:
-      'Led frontend development for landing and admin CMS pages, ensuring intuitive UI and seamless user experiences.',
+      'Led frontend development for landing and admin CMS pages, ensuring an intuitive UI and seamless user experience.',
     imgPath: '/Uptick.png',
     github: 'https://github.com/RB-Isiaq/uptick-capstone/tree/develop/dev',
     live: 'https://uptick-capstone-de2i.vercel.app/',
+    stack: ['React', 'Next.js'],
     type: 'personal',
   },
   {
     id: uuid.v7(),
     title: 'HelpMeOut',
     description:
-      'Record effortlessly, without the need for technical know-how. Assist your friends and family by producing and sharing videos demonstrating how to accomplish tasks on a website.',
+      'A screen-recording tool that lets anyone record and share step-by-step videos demonstrating how to accomplish tasks on a website — no technical know-how required.',
     imgPath: '/help-me-out.png',
     github: 'https://github.com/RB-Isiaq/helpMeOut',
     live: 'https://help-me-out-alpha.vercel.app/',
-    type: 'personal',
-  },
-  {
-    id: uuid.v7(),
-    title: 'Movie Box',
-    description:
-      'Immerse into the World of Entertainment with the top rated Movies and TV Shows, Trailers, and More, Unlock the World of Entertainment and Dive into the Ultimate Cinematic Experience',
-    imgPath: '/movies.png',
-    github: 'https://github.com/RB-Isiaq/movieDiscoveryApp',
-    live: 'https://movie-discovery-app-pied.vercel.app/',
-    type: 'personal',
-  },
-  {
-    id: uuid.v7(),
-    title: 'Task Tracker',
-    description:
-      'A MERN stack application that allows users to easily manage tasks, deadlines, and progress all in one place. With our intuitive interface, you can create, edit, and prioritize tasks effortlessly.',
-    imgPath: '/task-tracker.png',
-    github: 'https://github.com/RB-Isiaq/task-tracker-fe',
-    live: 'https://task-tracker-fe-self.vercel.app/',
-    type: 'personal',
-  },
-  {
-    id: uuid.v7(),
-    title: 'Gallery',
-    description:
-      'Experience the Art of Effortless Image Curation: A stunning platform where you can effortlessly curate your image collection through intuitive drag-and-drop interactions.',
-    imgPath: '/gallery.png',
-    github: 'https://github.com/RB-Isiaq/gallery',
-    live: 'https://gallery-rb-isiaq.vercel.app/',
-    type: 'personal',
-  },
-  {
-    id: uuid.v7(),
-    title: 'Fashionique',
-    description:
-      'A unique e-commerce web app showcasing wide varieties of fashions spanning accross different categories, ranging from women to men fashion accesor.',
-    imgPath: '/fashioniq.png',
-    github: 'https://github.com/RB-Isiaq/fashionique-',
-    live: 'https://fashionique.vercel.app/',
+    stack: ['React', 'TypeScript'],
     type: 'personal',
   },
 ];

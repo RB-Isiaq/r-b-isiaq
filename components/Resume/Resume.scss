@@ -112,6 +112,17 @@
 
     .job-title {
       font-weight: 500;
+
+      .job-type {
+        margin-left: 0.5rem;
+        padding: 0.05rem 0.45rem;
+        font-size: 0.7rem;
+        font-weight: 500;
+        border-radius: 0.25rem;
+        border: 1px solid #578b74;
+        color: #578b74;
+        vertical-align: middle;
+      }
     }
 
     .company {

@@ -5,13 +5,14 @@ export const TestId = {
 };
 
 export const content = {
-  stacks: ['ReactJS', 'NextJS', 'NodeJS', 'TypeScript'],
-  roles: [
-    'Frontend Developer',
-    'Software Engineer',
-    'Backend Enthusiast',
-    '< I Love Coding />',
-    'UI/UX Specialist',
-    'Problem Solver',
+  stacks: ['React', 'Next.js', 'TypeScript', 'Node.js'],
+  domains: [
+    'Fintech',
+    'AI Platforms',
+    'Healthcare',
+    'SaaS',
+    'Mobility',
+    'E-Commerce',
+    'Banking-as-a-Service',
   ],
 };

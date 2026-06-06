@@ -9,7 +9,9 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
-    margin: 100px 0;
+    align-items: flex-start;
+    gap: 64px;
+    margin: 72px 0;
   }
 
   .flexOne {
@@ -29,28 +31,47 @@
   }
 
   p {
-    text-align: center;
-    margin: 50px auto 0;
+    text-align: left;
+    margin: 24px auto 0;
     font-size: 16px;
-    font-style: italic;
+    line-height: 1.8;
+    color: #c9c9c9;
   }
 
-  .tools {
-    margin: 50px auto;
+  .groups {
+    margin: 40px auto 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    padding-left: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 24px;
 
-    .tool {
-      animation: spin 2s linear infinite;
-      border-radius: 50px;
+    .group {
+      .groupLabel {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #578b74;
+        margin-bottom: 12px;
+      }
 
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(0, 255, 213, 0.1);
+          border-color: rgba(0, 255, 213, 0.3);
+          transform: translateY(-2px);
         }
       }
     }

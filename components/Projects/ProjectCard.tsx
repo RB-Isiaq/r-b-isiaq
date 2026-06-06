@@ -10,33 +10,66 @@ const ProjectCard = ({
   live,
   dataType,
   type,
+  stack,
+  featured,
+  repos,
+  impact,
 }: IProject) => {
   return (
-    <div className={styles.card} data-testid={dataType}>
+    <div
+      className={`${styles.card} ${featured ? styles.featured : ''}`}
+      data-testid={dataType}
+    >
       <div className={styles.image}>
         <div className={styles.badge}>
-          {type === 'client' ? 'Client' : 'Personal'}
+          {featured ? 'Featured' : type === 'client' ? 'Client' : 'Personal'}
         </div>
         <Image
           src={imgPath}
           alt={title}
-          width={300}
-          height={220}
+          width={featured ? 640 : 300}
+          height={featured ? 360 : 220}
           className={styles.img}
         />
       </div>
       <div className={styles.projectInfo}>
         <h1 className={styles.title}>{title}</h1>
+        {impact && (
+          <p className={styles.impact}>
+            <span className={styles.impactDot} />
+            {impact}
+          </p>
+        )}
         <p className={styles.desc}> {description}</p>
-        <div className="project-tech-tools">
+        {stack && stack.length > 0 && (
+          <div className={styles.stack}>
+            {stack.map((tech) => (
+              <span key={tech} className={styles.tech}>
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+        <div className={styles.links}>
           <a rel="noopener" href={live} target="_blank">
             Live
           </a>
-          {github && (
-            <a rel="noopener" href={github} target="_blank">
-              Repo
-            </a>
-          )}
+          {repos
+            ? repos.map((repo) => (
+                <a
+                  key={repo.label}
+                  rel="noopener"
+                  href={repo.href}
+                  target="_blank"
+                >
+                  {repo.label}
+                </a>
+              ))
+            : github && (
+                <a rel="noopener" href={github} target="_blank">
+                  Repo
+                </a>
+              )}
         </div>
       </div>
     </div>

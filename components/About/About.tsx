@@ -1,6 +1,5 @@
-import Image from 'next/image';
 import styles from './About.module.scss';
-import { TestId, about, tools } from './constants';
+import { TestId, about, stackGroups } from './constants';
 
 const About: React.FC = () => {
   return (
@@ -9,23 +8,32 @@ const About: React.FC = () => {
         <h1>
           <span>About</span> Me
         </h1>
-        <p data-testid={TestId.ABOUT_DESC}>{about}</p>
+        <div data-testid={TestId.ABOUT_DESC}>
+          {about.split('\n').map((paragraph) => (
+            <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+          ))}
+        </div>
       </div>
       <div className={styles.flexTwo}>
         <h1>
-          My <span>Tech</span> Stacks
+          My <span>Tech</span> Stack
         </h1>
-        <div className={styles.tools} data-testid={TestId.TOOLS}>
-          {tools.map((tool) => (
-            <Image
-              key={tool.id}
-              src={tool.path}
-              alt={tool.label}
-              width={40}
-              height={40}
-              className={styles.tool}
-              data-testid={TestId.TOOL}
-            />
+        <div className={styles.groups} data-testid={TestId.TOOLS}>
+          {stackGroups.map((group) => (
+            <div key={group.id} className={styles.group}>
+              <h3 className={styles.groupLabel}>{group.label}</h3>
+              <div className={styles.pills}>
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className={styles.pill}
+                    data-testid={TestId.TOOL}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
