@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import Image from 'next/image';
+import { toast } from 'sonner';
 import styles from './Contact.module.scss';
 import emailjs from '@emailjs/browser';
 import { TestId } from './constants';
@@ -9,29 +10,30 @@ import { TestId } from './constants';
 const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [error, setError] = useState<boolean>(false);
-  const [success, setSuccess] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!formRef.current || loading) return;
 
-    if (formRef.current) {
-      emailjs
-        .sendForm(
-          'service_tl70x2r',
-          'template_pccn9vs',
-          formRef.current,
-          'k2UtwwjyErqh6ute5',
-        )
-        .then(
-          (result) => {
-            setSuccess(true);
-            console.log(result);
-          },
-          (error) => {
-            setError(true);
-            console.log(error);
-          },
-        );
+    setError(false);
+    setLoading(true);
+
+    try {
+      await emailjs.sendForm(
+        'service_tl70x2r',
+        'template_pccn9vs',
+        formRef.current,
+        'k2UtwwjyErqh6ute5',
+      );
+      toast.success("Message sent — thanks! I'll get back to you soon.");
+      formRef.current.reset();
+    } catch (err) {
+      setError(true);
+      toast.error("Couldn't send your message. Please try again.");
+      console.error('EmailJS sendForm failed:', err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -118,12 +120,23 @@ const Contact = () => {
               cols={10}
               name="message"
             />
-            <button className={styles.btn} data-testid={TestId.BTN}>
-              Contact Me
+            <button
+              className={styles.btn}
+              data-testid={TestId.BTN}
+              disabled={loading}
+            >
+              {loading ? 'Sending…' : 'Contact Me'}
             </button>
           </form>
-          {error && <p className={styles.error}>An error occured</p>}
-          {success && <p className={styles.success}>Sent succesfully 👍</p>}
+          {error && (
+            <p className={styles.error} role="alert">
+              Something went wrong — please try again, or email me directly at{' '}
+              <a href="mailto:isiaqridwanbukola1999@gmail.com">
+                isiaqridwanbukola1999@gmail.com
+              </a>
+              .
+            </p>
+          )}
         </div>
       </div>
     </section>
