@@ -111,21 +111,26 @@
           cursor: pointer;
           font-weight: 500;
 
-          &:hover {
+          &:hover:not(:disabled) {
             border-color: #578b74;
             color: #578b74;
+          }
+
+          &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
           }
         }
       }
 
       .error {
-        color: red;
+        color: #ff6b6b;
         text-align: center;
-      }
 
-      .success {
-        color: green;
-        text-align: center;
+        a {
+          color: inherit;
+          text-decoration: underline;
+        }
       }
     }
   }

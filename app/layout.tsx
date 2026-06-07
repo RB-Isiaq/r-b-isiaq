@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins, DM_Sans } from 'next/font/google';
 import Script from 'next/script';
+import { Toaster } from 'sonner';
 import Container from '@/components/Container/Container';
 import Navbar from '@/components/Navbar/Navbar';
 import './globals.scss';
@@ -31,6 +32,7 @@ export default function RootLayout({
             {children}
           </Container>
         </main>
+        <Toaster theme="dark" richColors position="top-center" />
       </body>
       <Script
         strategy="afterInteractive"
