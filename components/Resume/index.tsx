@@ -59,8 +59,9 @@ export default function Resume() {
             applications across fintech, AI, healthcare and mobility — including
             a London Stock Exchange–backed trading platform and
             Banking-as-a-Service wallets. I work primarily in React, Next.js and
-            TypeScript, collaborating across product, design and engineering to
-            ship performant, accessible and maintainable products.
+            TypeScript, and increasingly React Native mobile apps and NestJS
+            APIs, collaborating across product, design and engineering to ship
+            performant, accessible and maintainable products.
           </p>
         </section>
 
@@ -223,6 +224,7 @@ export default function Resume() {
               <span className="skill-tag">Next.js</span>
               <span className="skill-tag">Redux</span>
               <span className="skill-tag">React Native</span>
+              <span className="skill-tag">Expo</span>
               <span className="skill-tag">TailwindCSS</span>
               <span className="skill-tag">Node.js</span>
               <span className="skill-tag">Express.js</span>
@@ -285,8 +287,8 @@ export default function Resume() {
               </a>
               <p className="project-description">
                 A multi-tenant SaaS platform for mentorship communities, built
-                on a Feature-Sliced Design architecture with Next.js, TanStack
-                Query and Zustand.
+                end to end across a NestJS API, a Next.js web client and a React
+                Native mobile app with native push notifications.
               </p>
             </div>
 
